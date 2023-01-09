@@ -1,0 +1,42 @@
+<app-header></app-header>
+
+
+
+<section class="blog-details spad">
+  <div class="container">
+      <div class="row d-flex justify-content-center" *ngFor="let item of aboutInfo">
+          <div class="col-lg-8" >
+              <div class="blog__details__title">
+             
+                  <h2>About Us</h2>
+                  <div class="blog__details__social" *ngFor="let items of aboutInfo">
+                    <a *ngFor="let items of socialUrls" href="{{items.url}}" class="{{items.name}}"><i class="fa {{items.faclass}}"></i> {{items.name}}</a>
+                    
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-12">
+              <div class="blog__details__pic">
+                  <img src="https://i.postimg.cc/qRNjzn54/campaign-creators-g-Msn-Xq-ILjp4-unsplash.jpg" alt="">
+              </div>
+          </div>
+          <div class="col-lg-8">
+              <div class="blog__details__content">
+                  <div class="blog__details__text">
+                      <p>{{item.description}}</p>
+                  </div>
+              
+    
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+
+
+
+<app-footer></app-footer>
+

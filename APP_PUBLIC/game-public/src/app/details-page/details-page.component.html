@@ -1,0 +1,55 @@
+<app-header></app-header>
+
+<section class="anime-details spad" >
+  
+
+    <div class="container">
+        <div class="anime__details__content">
+            <div class="row">
+                <div class="col-lg-8">
+                    <img class="anime__details__pic set-bg"
+                    src="{{newGame.img}}"
+                    >
+
+                    </div>
+  
+                <div class="col-lg-4">
+                    <div class="anime__details__text">
+                        <div class="anime__details__title">
+                            <h3>{{newGame.name}}</h3>
+                            <span>{{newGame.author}}</span>
+                        </div>
+                      
+                        <p>Lorem Ipsum</p>
+                        <div class="anime__details__widget">
+                            <div class="row">
+                             <p> Genre: {{newGame.genre}}</p>
+                             <div class="product-price" *ngIf="newGame.price">$ {{newGame.price }}
+                            </div>
+                            <div class="product-price" *ngIf="!newGame.price">FREE
+                            </div>
+                            </div>
+                            {{newGame.rating}}
+                        </div>
+                        <a routerLink="/games/update/{{newGame._id}}">update</a>
+                        <div class="anime__details__btn">
+                         
+                            <a routerLink="/games/delete/{{newGame._id}}" class="watch-btn"><span>Delete</span> <i
+                                class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+        </div>
+    </section>
+
+
+
+
+
+<app-footer></app-footer>
+
+
+
